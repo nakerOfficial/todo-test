@@ -1,0 +1,472 @@
+{
+    "groups": {
+        "general": {
+            "modules": {
+                "html_pages": {
+                    "actions": {
+                        "v1.html_pages.create.*": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.html_pages.delete.*": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.html_pages.edit.*": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.html_pages.filters.*": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.html_pages.index.*": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        },
+                        "v1.html_pages.page.*": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        }
+                    }
+                },
+                "menu_items": {
+                    "actions": {
+                        "v1.menu_items.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name_ru",
+                                "name_ro",
+                                "name_en",
+                                "link",
+                                "icon",
+                                "author_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        },
+                        "v1.menu_items.filters.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name_ru",
+                                "name_ro",
+                                "name_en",
+                                "link",
+                                "icon",
+                                "author_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        },
+                        "v1.menu_items.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.menu_items.edit.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.menu_items.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.menu_items.edit_order_content.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.menu_items.edit_order_holders.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        }
+                    },
+                    "rules": {
+                        "v1.menu_items.rule1": {
+                            "levels": null,
+                            "fields": [],
+                            "param": []
+                        }
+                    }
+                },
+                "roles": {
+                    "actions": {
+                        "v1.roles.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.roles.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.roles.edit.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.roles.edit_permissions.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.roles.filters.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "guard_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        },
+                        "v1.roles.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "guard_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        }
+                    }
+                },
+                "cars": {
+                    "actions": {
+                        "v1.cars.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.cars.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.cars.edit.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.cars.filters.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "registration_number",
+                                "car_model_name",
+                                "production_year",
+                                "vin",
+                                "last_maintenance_at",
+                                "date_of_extended_insurance",
+                                "date_of_extended_osago",
+                                "car_class_name",
+                                "url",
+                                "description",
+                                "engine_volume",
+                                "transmission_type",
+                                "fuel_type",
+                                "fuel_consumption",
+                                "engine_horsepower",
+                                "max_speed",
+                                "acceleration_time_to_100",
+                                "сargo_space_volume",
+                                "author_name",
+                                "created_at",
+                                "updated_at",
+                                "is_active"
+                            ],
+                            "params": []
+                        },
+                        "v1.cars.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "registration_number",
+                                "car_model_name",
+                                "production_year",
+                                "vin",
+                                "last_maintenance_at",
+                                "date_of_extended_insurance",
+                                "date_of_extended_osago",
+                                "car_class_name",
+                                "url",
+                                "description",
+                                "engine_volume",
+                                "transmission_type",
+                                "fuel_type",
+                                "fuel_consumption",
+                                "engine_horsepower",
+                                "max_speed",
+                                "acceleration_time_to_100",
+                                "сargo_space_volume",
+                                "author_name",
+                                "created_at",
+                                "updated_at",
+                                "is_active"
+                            ],
+                            "params": []
+                        },
+                        "v1.cars.toggle_state.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        }
+                    }
+                },
+                "clients": {
+                    "actions": {
+                        "v1.clients.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.clients.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.clients.edit.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.clients.filters.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "full_name",
+                                "phone",
+                                "passport",
+                                "passport_issuer",
+                                "passport_issue_date",
+                                "drive_license",
+                                "author_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        },
+                        "v1.clients.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "full_name",
+                                "phone",
+                                "passport",
+                                "passport_photo",
+                                "passport_issuer",
+                                "passport_issue_date",
+                                "driver_license",
+                                "driver_license_front_photo",
+                                "driver_license_back_photo",
+                                "author_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        }
+                    }
+                },
+                "car_photos": {
+                    "actions": {
+                        "v1.car_photos.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.car_photos.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.car_photos.edit.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.car_photos.filters.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id"
+                            ],
+                            "params": []
+                        },
+                        "v1.car_photos.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id"
+                            ],
+                            "params": []
+                        }
+                    }
+                },
+                "car_brands": {
+                    "actions": {
+                        "v1.car_brands.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "author_id"
+                            ],
+                            "params": []
+                        },
+                        "v1.car_brands.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.car_brands.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.car_brands.edit.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        }
+                    }
+                },
+                "car_models": {
+                    "actions": {
+                        "v1.car_models.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "brand_id",
+                                "author_id"
+                            ],
+                            "params": []
+                        },
+                        "v1.car_models.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.car_models.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.car_models.edit.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        }
+                    }
+                }
+            },
+            "rules": {
+                "v1.rule1": {
+                    "levels": null,
+                    "fields": [],
+                    "param": []
+                }
+            }
+        },
+        "users": {
+            "modules": {
+                "users": {
+                    "actions": {
+                        "v1.users.create.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.delete.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.edit.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.filters.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "name",
+                                "email",
+                                "email_verified_at",
+                                "is_active",
+                                "position_name",
+                                "role_name",
+                                "project_name",
+                                "status_name",
+                                "author_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        },
+                        "v1.users.index.*": {
+                            "levels": "all",
+                            "fields": [
+                                "id",
+                                "avatar_link",
+                                "name",
+                                "email",
+                                "email_verified_at",
+                                "is_active",
+                                "position_name",
+                                "role_name",
+                                "project_name",
+                                "status_name",
+                                "author_name",
+                                "created_at",
+                                "updated_at"
+                            ],
+                            "params": []
+                        },
+                        "v1.users.profile.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.toggle_state.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.change_status.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.check_file.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        },
+                        "v1.users.change_password.*": {
+                            "levels": "all",
+                            "fields": [],
+                            "params": []
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
