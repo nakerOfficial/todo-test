@@ -1,16 +1,15 @@
 <?php
 
-namespace Database\Seeders\inn\roles;
+namespace Database\Seeders;
 
 use App\Models\User;
-use Exception;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Collection;
-
-use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Artisan;
 use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
-abstract class RoleSeeder extends Seeder
+class RoleSeeder extends Seeder
 {
     //  Client ID: 3
     //  Client secret: lc3pBucAyl37CFzaxndLYTkNbq0Z7lYX6r3Hqnqp
@@ -29,29 +28,33 @@ abstract class RoleSeeder extends Seeder
 
     protected function applyPermissions(): void
     {
-        $this->addRoleAndPermissions('super-admin');
-        $this->addRoleAndPermissions('admin');
-        $this->addRoleAndPermissions('user');
+        $this->addRoleAndPermissions('super-admin', ['writer editor']);
+        $this->addRoleAndPermissions('admin', ['writer editor']);
+        $this->addRoleAndPermissions('user', ['writer']);
     }
 
     private function addRoleAndPermissions(string $name, array $permissions = []): void
     {
-        $role = Role::create(['name' => $name]);
+        $role = Role::findOrCreate($name);
 
         foreach ($permissions as $value) {
-            $permission = Permission::create(['name' => $value]);
+            $permission = Permission::findOrCreate($value);
             $role->givePermissionTo($permission);
         }
     }
 
     private function addSuperUser(): void
     {
-        $user = User::create([
-            'name' => 'Iurii Rosca',
-            'email' => 'naker.official@gmail.com',
-            'password' => bcrypt('123456'),
-        ]);
-        $user->assignRole('super-admin');
-    }
+        $email = 'naker.official@gmail.com';
 
+        if(!User::where('email', '=',  $email)->exists())
+        {
+            $user = User::create([
+                'name' => 'Iurii Rosca',
+                'email' =>  $email,
+                'password' => bcrypt('123456'),
+            ]);
+            $user->assignRole('super-admin');
+        }
+    }
 }

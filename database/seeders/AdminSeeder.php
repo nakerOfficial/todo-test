@@ -1,8 +1,10 @@
 <?php
 
-namespace Database\Seeders\inn\roles;
+namespace Database\Seeders;
 
-class AdminSeeder extends RoleSeeder
+use Illuminate\Database\Seeder;
+
+class AdminSeeder extends Seeder
 {
     protected string $alias = 'admin';
     protected string $menu = 'seeds/com/files/roles/menu/admin.php';

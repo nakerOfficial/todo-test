@@ -23,26 +23,26 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('register/adm', [RegisterAdmController::class, 'register']);
+Route::post('adm/register', [RegisterAdmController::class, 'register']);
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [RegisterController::class, 'login']);
 
-Route::resource('users/adm', UsersAdmController::class);
 
 Route::group(['middleware' => ['auth:api']], function () {
-    Route::resource('tasks/adm', TasksAdmController::class);
-    Route::resource('tasks', TasksController::class);
-
     Route::get('test-auth', function () {
         dd(Auth::user()->id);
     });
 });
 
-
-Route::get('test', function () {
-//    $path = config_path() . "/admin.json";
-//    $json = json_decode(file_get_contents($path), true);
-    return 'Ooooooooooooookkkkkk!!!';
+Route::group(['middleware' => ['auth:api', 'for_admin'], 'prefix' => 'adm'], function () {
+    Route::resource('tasks', TasksAdmController::class);
+    Route::resource('users', UsersAdmController::class);
 });
+
+Route::group(['middleware' => ['auth:api', 'for_user']], function () {
+    Route::resource('tasks', TasksController::class);
+});
+
+
 
 
